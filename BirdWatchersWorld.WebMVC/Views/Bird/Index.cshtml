@@ -1,0 +1,63 @@
+﻿@model IEnumerable<BirdWatchersWorld.Models.BirdListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BirdID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MainColor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecondColor)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirdID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MainColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondColor)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.BirdID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BirdID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BirdID })
+            </td>
+        </tr>
+    }
+
+</table>
