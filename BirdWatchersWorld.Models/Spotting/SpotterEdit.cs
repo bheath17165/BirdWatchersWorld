@@ -9,7 +9,7 @@ namespace BirdWatchersWorld.Models.Spotting
 {
     public class SpotterEdit
     {
-        public int SpotterID { get; set; }
+        public string Id { get; set; }
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
         [Display(Name = "Last Name")]

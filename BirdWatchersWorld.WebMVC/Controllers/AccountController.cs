@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BirdWatchersWorld.WebMVC.Models;
 using BirdWatchersWorld.Services;
+using BirdWatchersWorld.Data;
 
 namespace BirdWatchersWorld.WebMVC.Controllers
 {
@@ -155,7 +156,7 @@ namespace BirdWatchersWorld.WebMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new Spotter { FirstName = model.FirstName, LastName = model.LastName, UserName = model.UserName, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -169,7 +170,7 @@ namespace BirdWatchersWorld.WebMVC.Controllers
                     //var userId = Guid.Parse(User.Identity.GetUserId());
                     //var service = new SpotterService(userId);
                     //service.CreateSpotter(FirstName, LastName);
-                    return RedirectToAction("Create", "Spotter");
+                    return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
             }

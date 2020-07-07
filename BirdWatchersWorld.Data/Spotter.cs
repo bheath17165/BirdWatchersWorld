@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BirdWatchersWorld.WebMVC.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,17 +9,13 @@ using System.Threading.Tasks;
 
 namespace BirdWatchersWorld.Data
 {
-    public class Spotter
+    public class Spotter : ApplicationUser
     {
-        [Key]
-        public int SpotterID { get; set; }
-        [Required, Display(Name="First Name")]
         public string FirstName { get; set; }
-        [Required, Display(Name="Last Name")]
         public string LastName { get; set; }
         [Display(Name="Full Name")]
         public string FullName { get { return string.Format("{0} {1}", FirstName, LastName); } }
 
-        public virtual ICollection<Sighting> Sightings { get; set; }
+        public virtual ICollection<Sighting> Sightings { get; set; } = new List<Sighting>();
     }
 }

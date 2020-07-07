@@ -19,7 +19,7 @@ namespace BirdWatchersWorld.Data
         [Required, Display(Name = "Secondary Color")]
         public string SecondColor { get; set; }
 
-        public virtual ICollection<Sighting> Sightings { get; set; }
+        public virtual ICollection<Sighting> Sightings { get; set; } = new List<Sighting>();
         
         //public int Picture { get; set; }
         //public int Sound { get; set; }

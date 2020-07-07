@@ -15,5 +15,8 @@ namespace BirdWatchersWorld.Models
         public string MainColor { get; set; }
         [Required, Display(Name = "Secondary Color")]
         public string SecondColor { get; set; }
+
+        [Display(Name = "Bird")]
+        public int?[] Sighting { get; set; }
     }
 }

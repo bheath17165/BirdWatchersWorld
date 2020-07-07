@@ -49,7 +49,7 @@ namespace BirdWatchersWorld.WebMVC.Controllers
             return View(model);
         }
 
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
             var svc = CreateSpotterService();
             var model = svc.GetSpotterByID(id);
@@ -57,14 +57,14 @@ namespace BirdWatchersWorld.WebMVC.Controllers
             return View(model);
         }
 
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
             var service = CreateSpotterService();
             var detail = service.GetSpotterByID(id);
             var model =
                 new SpotterEdit
                 {
-                    SpotterID = detail.SpotterID,
+                    Id = detail.Id,
                     FirstName = detail.FirstName,
                     LastName = detail.LastName
                 };
@@ -73,11 +73,11 @@ namespace BirdWatchersWorld.WebMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, SpotterEdit model)
+        public ActionResult Edit(string id, SpotterEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.SpotterID != id)
+            if (model.Id != id)
             {
                 ModelState.AddModelError("", "ID Mismatch");
                 return View(model);
@@ -96,7 +96,7 @@ namespace BirdWatchersWorld.WebMVC.Controllers
         }
 
         [ActionName("Delete")]
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
             var svc = CreateSpotterService();
             var model = svc.GetSpotterByID(id);
@@ -107,7 +107,7 @@ namespace BirdWatchersWorld.WebMVC.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteSpotter(int id)
+        public ActionResult DeleteSpotter(string id)
         {
             var service = CreateSpotterService();
 

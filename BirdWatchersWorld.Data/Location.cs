@@ -25,6 +25,6 @@ namespace BirdWatchersWorld.Data
         [Required, Display(Name = "West Coordinate")]
         public double West { get; set; }
 
-        public virtual ICollection<Sighting> Sightings { get; set; }
+        public virtual ICollection<Sighting> Sightings { get; set; } = new List<Sighting>();
     }
 }

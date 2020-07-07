@@ -54,14 +54,14 @@ namespace BirdWatchersWorld.Services
             }
         }
 
-        public SpotterDetail GetSpotterByID(int id)
+        public SpotterDetail GetSpotterByID(string id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Spotters
-                        .Single(e => e.SpotterID == id); //&& e.OwnerId == _userId
+                        .Single(e => e.Id == id); //&& e.OwnerId == _userId
                 return
                     new SpotterDetail
                     {
@@ -78,7 +78,7 @@ namespace BirdWatchersWorld.Services
                 var entity =
                     ctx
                         .Spotters
-                        .Single(e => e.SpotterID == model.SpotterID);
+                        .Single(e => e.Id == model.Id);
 
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
@@ -87,14 +87,14 @@ namespace BirdWatchersWorld.Services
             }
         }
 
-        public bool DeleteSpotter(int spotterID)
+        public bool DeleteSpotter(string spotterID)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Spotters
-                        .Single(e => e.SpotterID == spotterID);
+                        .Single(e => e.Id == spotterID);
 
                 ctx.Spotters.Remove(entity);
 

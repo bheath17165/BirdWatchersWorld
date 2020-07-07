@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: aquamarine;
+    background-image: url(../assets/bird2.jpg);
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -22,4 +22,15 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white !important;
 }
