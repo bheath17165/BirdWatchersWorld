@@ -246,12 +246,15 @@
     <Content Include="Views\Bird\Details.cshtml" />
     <Content Include="Views\Bird\Edit.cshtml" />
     <Content Include="Views\Bird\Delete.cshtml" />
+    <Content Include="Views\Spotter\Index.cshtml" />
+    <Content Include="Views\Spotter\Details.cshtml" />
+    <Content Include="Views\Spotter\Edit.cshtml" />
+    <Content Include="Views\Spotter\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Location\" />
     <Folder Include="Views\Sighting\" />
-    <Folder Include="Views\Spotter\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -11,5 +11,9 @@ namespace BirdWatchersWorld.Models.Sighting
     {
         [Required, Display(Name = "Time Seen")]
         public DateTimeOffset TimeSeen { get; set; }
+
+        public int BirdID { get; set; }
+
+        //public int LocationID { get; set; }
     }
 }

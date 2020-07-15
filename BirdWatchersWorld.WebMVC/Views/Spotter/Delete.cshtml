@@ -1,45 +1,37 @@
-﻿@model BirdWatchersWorld.Models.BirdDetail
+﻿@model BirdWatchersWorld.Models.Spotting.SpotterDetail
 
 @{
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete Bird</h2>
+<h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.BirdID)
+            @Html.DisplayNameFor(model => model.FirstName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.BirdID)
+            @Html.DisplayFor(model => model.FirstName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.LastName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Name)
+            @Html.DisplayFor(model => model.LastName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.MainColor)
+            @Html.DisplayNameFor(model => model.UserName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.MainColor)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SecondColor)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SecondColor)
+            @Html.DisplayFor(model => model.UserName)
         </dd>
 
     </dl>

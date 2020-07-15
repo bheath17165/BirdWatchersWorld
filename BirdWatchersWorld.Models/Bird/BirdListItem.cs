@@ -16,5 +16,6 @@ namespace BirdWatchersWorld.Models
         public string MainColor { get; set; }
         [Required, Display(Name = "Secondary Color")]
         public string SecondColor { get; set; }
+        //public string SpotterName { get; set; }
     }
 }

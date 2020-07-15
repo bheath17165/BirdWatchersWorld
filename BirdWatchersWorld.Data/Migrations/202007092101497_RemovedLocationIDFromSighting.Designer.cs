@@ -7,13 +7,13 @@ namespace BirdWatchersWorld.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class AddedICollectionAndForeignKeys : IMigrationMetadata
+    public sealed partial class RemovedLocationIDFromSighting : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedICollectionAndForeignKeys));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(RemovedLocationIDFromSighting));
         
         string IMigrationMetadata.Id
         {
-            get { return "202007011920336_AddedICollectionAndForeignKeys"; }
+            get { return "202007092101497_RemovedLocationIDFromSighting"; }
         }
         
         string IMigrationMetadata.Source

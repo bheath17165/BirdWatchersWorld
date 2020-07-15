@@ -13,6 +13,14 @@ namespace BirdWatchersWorld.WebMVC
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //routes.MapMvcAttributeRoutes();
+
+            //routes.MapRoute(
+            //    "BirdAlphabetically",
+            //    "Bird/Alphabetically/{name}",
+            //    new { controller = "Bird", action = "Alphabetically" },
+            //    new { name = @"\{}" });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

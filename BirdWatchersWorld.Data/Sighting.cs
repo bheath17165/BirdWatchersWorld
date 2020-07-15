@@ -16,15 +16,15 @@ namespace BirdWatchersWorld.Data
         public DateTimeOffset TimeSeen { get; set; }
 
         [ForeignKey("Spotter")]
-        public int SpotterID { get; set; }
+        public string SpotterID { get; set; }
         public virtual Spotter Spotter { get; set; }
 
         [ForeignKey("Bird")]
         public int BirdID { get; set; }
         public virtual Bird Bird { get; set; }
 
-        [ForeignKey("Location")]
-        public int LocationID { get; set; }
-        public virtual Location Location { get; set; }
+        //[ForeignKey("Location")]
+        //public int LocationID { get; set; }
+        //public virtual Location Location { get; set; }
     }
 }

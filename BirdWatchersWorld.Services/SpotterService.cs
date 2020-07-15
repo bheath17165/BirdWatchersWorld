@@ -23,8 +23,8 @@ namespace BirdWatchersWorld.Services
             var entity =
                 new Spotter()
                 {
-                        FirstName = model.FirstName,
-                        LastName = model.LastName
+                    FirstName = model.FirstName,
+                    LastName = model.LastName
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -45,9 +45,10 @@ namespace BirdWatchersWorld.Services
                             e =>
                                 new SpotterListItem
                                 {
-                                        FirstName = e.FirstName,
-                                        LastName = e.LastName
-                                    }
+                                    Id = e.Id,
+                                    FirstName = e.FirstName,
+                                    LastName = e.LastName
+                                }
                         );
 
                 return query.ToArray();
@@ -58,16 +59,17 @@ namespace BirdWatchersWorld.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity =
+                var entity = (Spotter) //Casting
                     ctx
-                        .Spotters
-                        .Single(e => e.Id == id); //&& e.OwnerId == _userId
+                        .Users
+                        .Single(e => e.Id == id);
                 return
                     new SpotterDetail
                     {
-                            FirstName = entity.FirstName,
-                            LastName = entity.LastName
-                        };
+                        FirstName = entity.FirstName,
+                        LastName = entity.LastName,
+                        UserName = entity.UserName
+                    };
             }
         }
 

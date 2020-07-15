@@ -57,17 +57,17 @@
     <Compile Include="Bird.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Location.cs" />
-    <Compile Include="Migrations\202006301543159_FirstMigration.cs" />
-    <Compile Include="Migrations\202006301543159_FirstMigration.Designer.cs">
-      <DependentUpon>202006301543159_FirstMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202007071732261_ChangedForeignKeys.cs" />
+    <Compile Include="Migrations\202007071732261_ChangedForeignKeys.Designer.cs">
+      <DependentUpon>202007071732261_ChangedForeignKeys.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007011732172_SecondMigration.cs" />
-    <Compile Include="Migrations\202007011732172_SecondMigration.Designer.cs">
-      <DependentUpon>202007011732172_SecondMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202007092101497_RemovedLocationIDFromSighting.cs" />
+    <Compile Include="Migrations\202007092101497_RemovedLocationIDFromSighting.Designer.cs">
+      <DependentUpon>202007092101497_RemovedLocationIDFromSighting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007011920336_AddedICollectionAndForeignKeys.cs" />
-    <Compile Include="Migrations\202007011920336_AddedICollectionAndForeignKeys.Designer.cs">
-      <DependentUpon>202007011920336_AddedICollectionAndForeignKeys.cs</DependentUpon>
+    <Compile Include="Migrations\202007132057510_AddedSpotterIDAgain.cs" />
+    <Compile Include="Migrations\202007132057510_AddedSpotterIDAgain.Designer.cs">
+      <DependentUpon>202007132057510_AddedSpotterIDAgain.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,14 +79,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202006301543159_FirstMigration.resx">
-      <DependentUpon>202006301543159_FirstMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202007071732261_ChangedForeignKeys.resx">
+      <DependentUpon>202007071732261_ChangedForeignKeys.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007011732172_SecondMigration.resx">
-      <DependentUpon>202007011732172_SecondMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202007092101497_RemovedLocationIDFromSighting.resx">
+      <DependentUpon>202007092101497_RemovedLocationIDFromSighting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007011920336_AddedICollectionAndForeignKeys.resx">
-      <DependentUpon>202007011920336_AddedICollectionAndForeignKeys.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202007132057510_AddedSpotterIDAgain.resx">
+      <DependentUpon>202007132057510_AddedSpotterIDAgain.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

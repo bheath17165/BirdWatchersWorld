@@ -14,6 +14,5 @@ namespace BirdWatchersWorld.Models.Spotting
         public string FirstName { get; set; }
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
-        //public string FullName { get { return string.Format("{0} {1}", FirstName, LastName); } }
     }
 }

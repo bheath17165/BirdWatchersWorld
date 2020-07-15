@@ -9,8 +9,10 @@ using System.Threading.Tasks;
 
 namespace BirdWatchersWorld.Data
 {
-    public class Spotter : ApplicationUser
+    public class Spotter : ApplicationUser //kill 2 birds with 1 stone (ha)
     {
+        [Key]
+        public string SpotterID { get { return Id; } }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         [Display(Name="Full Name")]

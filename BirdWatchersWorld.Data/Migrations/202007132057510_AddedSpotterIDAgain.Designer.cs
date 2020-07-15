@@ -7,13 +7,13 @@ namespace BirdWatchersWorld.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class SecondMigration : IMigrationMetadata
+    public sealed partial class AddedSpotterIDAgain : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SecondMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedSpotterIDAgain));
         
         string IMigrationMetadata.Id
         {
-            get { return "202007011732172_SecondMigration"; }
+            get { return "202007132057510_AddedSpotterIDAgain"; }
         }
         
         string IMigrationMetadata.Source

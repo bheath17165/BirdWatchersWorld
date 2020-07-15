@@ -82,8 +82,7 @@ namespace BirdWatchersWorld.WebMVC.Controllers
             {
                 case SignInStatus.Success:
                     //database call, check if user has firstname lastname
-                    var userId = Guid.Parse(User.Identity.GetUserId());
-                    
+                    //var userId = Guid.Parse(User.Identity.GetUserId());
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");

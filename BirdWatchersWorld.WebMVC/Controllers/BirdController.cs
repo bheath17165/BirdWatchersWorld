@@ -1,8 +1,14 @@
-﻿using BirdWatchersWorld.Models;
+﻿using BirdWatchersWorld.Data;
+using BirdWatchersWorld.Models;
 using BirdWatchersWorld.Services;
+using BirdWatchersWorld.WebMVC.Models;
 using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Core.Common.CommandTrees;
+using System.Data.Entity.Infrastructure.MappingViews;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,11 +19,20 @@ namespace BirdWatchersWorld.WebMVC.Controllers
     public class BirdController : Controller
     {
         // GET: Bird
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder, string searchString)
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new BirdService(userId);
-            var model = service.GetBirds();
+            //var userId = Guid.Parse(User.Identity.GetUserId());
+            //var service = new BirdService(userId);
+            //var model = service.GetBirds();
+            //return View(model);
+
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.MainColorSortParm = sortOrder == "mainColor" ? "mainColor_desc" : "mainColor";
+            ViewBag.SecondaryColorSortParm = sortOrder == "secondaryColor" ? "secondaryColor_desc" : "secondaryColor";
+            ViewBag.CountyNameSortParm = sortOrder == "countyName" ? "countyName_desc" : "countyName";
+
+            BirdService service = CreateBirdService();
+            var model = service.SortBirds(sortOrder, searchString);
 
             return View(model);
         }
@@ -117,6 +132,11 @@ namespace BirdWatchersWorld.WebMVC.Controllers
 
             return RedirectToAction("Index");
         }
+
+        //public ActionResult Alphabetically(string name)
+        //{
+        //    return Content
+        //}
 
         private BirdService CreateBirdService()
         {

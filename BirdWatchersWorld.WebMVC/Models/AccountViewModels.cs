@@ -49,8 +49,7 @@ namespace BirdWatchersWorld.WebMVC.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
+        [Display(Name = "User Name")] //Changed from "Email" for proper Login
         public string Email { get; set; }
 
         [Required]

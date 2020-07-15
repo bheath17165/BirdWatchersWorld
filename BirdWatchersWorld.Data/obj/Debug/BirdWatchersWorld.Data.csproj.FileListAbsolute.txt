@@ -14,7 +14,7 @@ C:\ElevenFiftyProjects\BirdWatchersWorld\BirdWatchersWorld.Data\bin\Debug\Micros
 C:\ElevenFiftyProjects\BirdWatchersWorld\BirdWatchersWorld.Data\obj\Debug\BirdWatchersWorld.Data.csproj.CopyComplete
 C:\ElevenFiftyProjects\BirdWatchersWorld\BirdWatchersWorld.Data\obj\Debug\BirdWatchersWorld.Data.dll
 C:\ElevenFiftyProjects\BirdWatchersWorld\BirdWatchersWorld.Data\obj\Debug\BirdWatchersWorld.Data.pdb
-C:\ElevenFiftyProjects\BirdWatchersWorld\BirdWatchersWorld.Data\obj\Debug\BirdWatchersWorld.Data.Migrations.FirstMigration.resources
+C:\ElevenFiftyProjects\BirdWatchersWorld\BirdWatchersWorld.Data\obj\Debug\BirdWatchersWorld.Data.Migrations.ChangedForeignKeys.resources
 C:\ElevenFiftyProjects\BirdWatchersWorld\BirdWatchersWorld.Data\obj\Debug\BirdWatchersWorld.Data.csproj.GenerateResource.cache
-C:\ElevenFiftyProjects\BirdWatchersWorld\BirdWatchersWorld.Data\obj\Debug\BirdWatchersWorld.Data.Migrations.SecondMigration.resources
-C:\ElevenFiftyProjects\BirdWatchersWorld\BirdWatchersWorld.Data\obj\Debug\BirdWatchersWorld.Data.Migrations.AddedICollectionAndForeignKeys.resources
+C:\ElevenFiftyProjects\BirdWatchersWorld\BirdWatchersWorld.Data\obj\Debug\BirdWatchersWorld.Data.Migrations.RemovedLocationIDFromSighting.resources
+C:\ElevenFiftyProjects\BirdWatchersWorld\BirdWatchersWorld.Data\obj\Debug\BirdWatchersWorld.Data.Migrations.AddedSpotterIDAgain.resources

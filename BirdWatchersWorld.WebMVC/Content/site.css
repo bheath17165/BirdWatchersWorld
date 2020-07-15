@@ -2,6 +2,12 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-image: url(../assets/bird2.jpg);
+    background-attachment: scroll !important;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -22,15 +28,36 @@ input,
 select,
 textarea {
     max-width: 280px;
+    color: black;
 }
 
-a,
-p,
+/*a,
+text,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-    color: white !important;
+h6,
+dt,
+dd {
+    color: white;
+}*/
+
+a {
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+p {
+    font-size: 18px;
+}
+
+td,
+th {
+    font-size: 20px;
 }

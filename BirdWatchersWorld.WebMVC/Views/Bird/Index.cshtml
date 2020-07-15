@@ -20,11 +20,16 @@
         @TempData["SaveResult"]
     </div>
 }
+
+@using (Html.BeginForm())
+{
+    <p>
+        Find by name or color: @Html.TextBox("SearchString")
+        <input style="color:black" type="submit" value="Search" /></p>
+}
+
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.BirdID)
-        </th>
+    @*<tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
@@ -34,15 +39,27 @@
         <th>
             @Html.DisplayNameFor(model => model.SecondColor)
         </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.SpotterName)
+        </th>
+        <th></th>
+    </tr>*@
+    <tr>
+        <th>
+            @Html.ActionLink("Bird Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Main Color", "Index", new { sortOrder = ViewBag.MainColorSortParm })
+        </th>
+        <th>
+            @Html.ActionLink("Secondary Color", "Index", new { sortOrder = ViewBag.SecondaryColorSortParm })
+        </th>
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.BirdID)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
@@ -52,10 +69,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.SecondColor)
             </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.SpotterName)
+            </td>*@
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.BirdID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.BirdID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.BirdID })
+                @Html.ActionLink("Edit", "Edit", new { id=item.BirdID }, new { @style = "color:#ffae00;" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BirdID }, new { @style = "color:#08c928;" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BirdID }, new { @style = "color:#ff0000;" })
             </td>
         </tr>
     }

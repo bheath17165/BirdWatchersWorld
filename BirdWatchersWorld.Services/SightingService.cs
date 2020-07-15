@@ -4,6 +4,7 @@ using BirdWatchersWorld.WebMVC.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -49,6 +50,28 @@ namespace BirdWatchersWorld.Services
                                 }
                         );
 
+                return query.ToArray();
+            }
+        }
+
+        public IEnumerable<SightingListItem> GetSightingsByUser(string UserId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Sightings
+                        .Where(e => e.SpotterID == UserId)
+                        .Select(
+                            e =>
+                                new SightingListItem
+                                {
+                                    SightingID = e.SightingID,
+                                    TimeSeen = e.TimeSeen,
+                                    FullName = e.Spotter.FullName
+                                    //birds spotted
+                                }
+                        );
                 return query.ToArray();
             }
         }
