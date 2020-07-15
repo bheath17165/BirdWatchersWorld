@@ -33,6 +33,17 @@
         <dd>
             @Html.DisplayFor(model => model.UserName)
         </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.BirdsSeen)
+        </dt>
+
+        @foreach (var bird in Model.BirdsSeen)
+        {
+            <dd>
+                @Html.DisplayFor(modelBird => bird.Name)
+            </dd>
+        }
 
     </dl>
 </div>

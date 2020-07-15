@@ -10,8 +10,14 @@
     </div>
     <div style="padding-left: 5em; margin-top: 2em;" class="col-md-6">
         <h2>Search For a Bird</h2>
-        <input type="text" placeholder="What color was the bird?" style="border:none; margin-left: 4.2em; margin-top: 2em;">
-        <p><a class="btn btn-default" href="" style="margin-left: 8em; margin-top: 3em;">Enter &raquo;</a></p>
+        @using (Html.BeginForm("Index", "Bird", FormMethod.Get))
+        {
+    <p>
+        @Html.TextBox("SearchString", null, new { placeholder = "What color was the bird?" })
+        @*<input type="text" placeholder="What color was the bird?" style="border:none; margin-left: 4.2em; margin-top: 2em;">*@
+        <input style="color:black" type="submit" value="Search" />
+    </p>
+        }
     </div>
 </div>
 

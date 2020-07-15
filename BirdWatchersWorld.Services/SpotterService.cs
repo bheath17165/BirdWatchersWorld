@@ -1,4 +1,5 @@
 ﻿using BirdWatchersWorld.Data;
+using BirdWatchersWorld.Models;
 using BirdWatchersWorld.Models.Spotting;
 using BirdWatchersWorld.WebMVC.Models;
 using System;
@@ -63,12 +64,28 @@ namespace BirdWatchersWorld.Services
                     ctx
                         .Users
                         .Single(e => e.Id == id);
+
+                List<BirdListItem> bli = new List<BirdListItem>();
+
+                foreach(var sighting in entity.Sightings)
+                {
+                    BirdListItem birdListItem = new BirdListItem
+                    {
+                        BirdID = sighting.BirdID,
+                        Name = sighting.Bird.Name,
+                        MainColor = sighting.Bird.MainColor,
+                        SecondColor = sighting.Bird.SecondColor
+                    };
+                 bli.Add(birdListItem);   
+                }
+
                 return
                     new SpotterDetail
                     {
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
-                        UserName = entity.UserName
+                        UserName = entity.UserName,
+                        BirdsSeen = bli
                     };
             }
         }
