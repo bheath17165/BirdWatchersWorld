@@ -1,0 +1,65 @@
+﻿@model BirdWatchersWorld.Models.BirdDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Bird Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BirdID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirdID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MainColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecondColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondColor)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.SpotterName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpotterName)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeSeen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeSeen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BirdID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

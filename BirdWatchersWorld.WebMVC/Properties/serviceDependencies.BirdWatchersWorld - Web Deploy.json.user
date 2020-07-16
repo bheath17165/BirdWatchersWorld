@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-07-16T00:18:08.5741727Z"
+    }
+  },
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "BirdWatchersWorld_rg"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "c8073d77-c0ba-40d4-89d2-37f38037723e"
+    }
+  }
+}
